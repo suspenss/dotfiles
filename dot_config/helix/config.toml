@@ -1,0 +1,8 @@
+# theme = "github_dark"
+
+[keys.normal]
+i = "move_visual_line_up"
+k = "move_visual_line_down"
+j = "move_char_left"
+h = "insert_mode"
+C-s = ":w"

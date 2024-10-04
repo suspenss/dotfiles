@@ -1,12 +1,18 @@
+#### sheldon zsh plugins manager
 eval "$(sheldon source)"
 
+
+#### Default Editor
 export EDITOR="hx"
 
+
+#### terminfo file (Macos only)
 PATH=/usr/local/Cellar/ncurses/6.5/bin:$PATH
 
-# terminal proxy setting functions
+
+#### terminal proxy setting functions
 set_proxy() {
-  echo "Let's setup a proxy config."
+  echo "Proxy config have set."
   export http_proxy=http://127.0.0.1:7899
   export https_proxy=http://127.0.0.1:7899
   export ALL_PROXY=socks5://127.0.0.1:7898
@@ -18,24 +24,27 @@ unset_proxy() {
   unset ALL_PROXY
 }
 
-# set the proxy
 set_proxy
 
-# BEGIN opam configuration
-# This is useful if you're using opam as it adds:
+
+#### BEGIN opam configuration
 eval $(opam env)
+
+# This is useful if you're using opam as it adds:
 #   - the correct directories to the PATH
 #   - auto-completion for the opam binary
 # This section can be safely removed at any time if needed.
 # [[ ! -r '/Users/epoche/.opam/opam-init/init.zsh' ]] || source '/Users/epoche/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
-# END opam configuration
+##### END opam configuration
 
 
+#### key mapping
 # history-substring-search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 
+#### alias
 alias ls='ls --color=auto'
 #alias dir='dir --color=auto'
 #alias vdir='vdir --color=auto'
@@ -44,14 +53,15 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+# convenient ls
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# chezmoi dotfile manager
+alias dot='chezmoi'
 
 #incus system
 alias golearn='incus exec learn fish --user=1000 --group=998 --cwd=/home/suspen'
 
 
-# chezmoi
-alias dot='chezmoi'

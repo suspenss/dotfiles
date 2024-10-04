@@ -1,0 +1,59 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true
+  },
+  "features": {
+    "inline_completion_provider": "none"
+  },
+  "theme": "Github Light",
+  "ui_font_size": 16,
+  "buffer_font_size": 14,
+  "buffer_font_family": "FiraCode Nerd Font",
+  // "formatter": "language_server",
+  "languages": {
+    "C": {
+      "format_on_save": "on",
+      "use_on_type_format": false
+    },
+    "C++": {
+      "format_on_save": "on",
+      "use_on_type_format": false
+    }
+  },
+  "tab_size": 2,
+  "inlay_hints": {
+    // Global switch to toggle hints on and off, switched off by default.
+    "enabled": true
+  },
+
+  // Git gutter behavior configuration.
+  "git": {
+    // Control whether the git gutter is shown. May take 2 values:
+    // 1. Show the gutter
+    //      "git_gutter": "tracked_files"
+    // 2. Hide the gutter
+    //      "git_gutter": "hide"
+    "git_gutter": "tracked_files",
+    // Control whether the git blame information is shown inline,
+    // in the currently focused line.
+    "inline_blame": {
+      "enabled": false
+      // Sets a delay after which the inline blame information is shown.
+      // Delay is restarted with every cursor movement.
+      // "delay_ms": 600
+    }
+  }
+  // "proxy": "socks5://127.0.0.1:7890",
+  // "proxy": "http://127.0.0.1:7890"
+  // "proxy": "https://127.0.0.1:7890"
+  // "ssh_connections": ["ssh://root@localhost:26122/root/cs144"]
+}
