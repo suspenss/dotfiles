@@ -1,10 +1,12 @@
-#### sheldon zsh plugins manager
+# zshrc
+
+#### Sheldon zsh plugins manager
 eval "$(sheldon source)"
 
 
 #### Default Editor
-export EDITOR="hx"
-
+export EDITOR="nvim"
+alias vi="nvim"
 
 #### terminfo file (Macos only)
 PATH=/usr/local/Cellar/ncurses/6.5/bin:$PATH
