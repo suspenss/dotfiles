@@ -1,7 +1,8 @@
 README.md 
 ignore-*
 
-{{- if ne .chezmoi.hostname "sucni" }}
-dot_config/kitty
-dot_config/zed
+{{- if eq .chezmoi.hostname "sucni" }}
+.config/kitty
+.config/zed
 {{- end }}
+
