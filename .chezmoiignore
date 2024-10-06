@@ -1,7 +1,10 @@
 README.md 
 ignore-*
 
+<<<<<<< Updated upstream
 .config/yazi/package.toml.origin
+=======
+>>>>>>> Stashed changes
 
 {{- if eq .chezmoi.hostname "sucni" }}
 .config/kitty
