@@ -1,6 +1,8 @@
 README.md 
 ignore-*
 
+.config/yazi/package.toml.origin
+
 {{- if eq .chezmoi.hostname "sucni" }}
 .config/kitty
 .config/zed
