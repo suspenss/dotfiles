@@ -83,7 +83,6 @@ def _draw_left_status(
     return end
 
 
-
 def _draw_right_status(screen: Screen) -> int:
     draw_attributed_string(Formatter.reset, screen)
 
@@ -123,7 +122,6 @@ def draw_tab(
     is_last: bool,
     extra_data: ExtraData,
 ) -> int:
-
     # Only draw the icon for the first tab
     if index == 0:
         _draw_icon(screen, index)
