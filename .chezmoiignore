@@ -2,6 +2,7 @@ README.md
 ignore-*
 
 .config/yazi/package.toml.origin
+.config/nvim/lazy-lock.json.origin
 
 {{- if eq .chezmoi.hostname "sucni" }}
 .config/kitty
