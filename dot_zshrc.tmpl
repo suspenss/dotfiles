@@ -8,7 +8,6 @@ eval "$(sheldon source)"
 export EDITOR="nvim"
 alias vi="nvim"
 
-
 {{ if eq .chezmoi.username "epoche" }}
 # -------------- MACOS ONLY --------------- #
 #### terminfo file (Macos only)
@@ -34,10 +33,6 @@ set_proxy
 #incus system on macos 
 alias golearn='incus exec learn fish --user=1000 --group=998 --cwd=/home/suspen'
 
-# ------------- END MACOS ONLY ------------ #
-{{ end }}
-
-
 #### BEGIN opam configuration
 #eval $(opam env)
 
@@ -48,6 +43,8 @@ alias golearn='incus exec learn fish --user=1000 --group=998 --cwd=/home/suspen'
 # [[ ! -r '/Users/epoche/.opam/opam-init/init.zsh' ]] || source '/Users/epoche/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 ##### END opam configuration
 
+# ------------- END MACOS ONLY ------------ #
+{{ end }}
 
 #### key mapping
 # history-substring-search
