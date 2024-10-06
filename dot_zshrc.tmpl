@@ -8,7 +8,31 @@ eval "$(sheldon source)"
 export EDITOR="nvim"
 alias vi="nvim"
 
-{{ if eq .chezmoi.username "epoche" }}
+
+#### key mapping
+# history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+
+#### alias
+alias ls='ls --color=auto'
+#alias dir='dir --color=auto'
+#alias vdir='vdir --color=auto'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# convenient ls
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# chezmoi dotfile manager
+alias dot='chezmoi'
+
+{{ if eq .chezmoi.username "epoche" -}}
 # -------------- MACOS ONLY --------------- #
 #### terminfo file (Macos only)
 PATH=/usr/local/Cellar/ncurses/6.5/bin:$PATH
@@ -44,28 +68,6 @@ alias golearn='incus exec learn fish --user=1000 --group=998 --cwd=/home/suspen'
 ##### END opam configuration
 
 # ------------- END MACOS ONLY ------------ #
-{{ end }}
+{{- end }}
 
-#### key mapping
-# history-substring-search
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
-
-#### alias
-alias ls='ls --color=auto'
-#alias dir='dir --color=auto'
-#alias vdir='vdir --color=auto'
-
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-# convenient ls
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-# chezmoi dotfile manager
-alias dot='chezmoi'
 
