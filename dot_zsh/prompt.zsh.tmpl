@@ -1,8 +1,8 @@
-# {{- if ne .chezmoi.hostname "sucni" }}
+{{- if ne .chezmoi.hostname "sucni" -}}
 PROMPT="%F{006}%n"
 PROMPT+=" %F{015}at %F{006}%2~%f%F{006} %% "
-# {{ else }}
-# PROMPT='%F{blue}%n :: %2~ %% '
-# {{ end }}
+{{ else -}}
+PROMPT='%F{blue}%n :: %2~ %% '
+{{ end -}}
 
 precmd() { echo }
