@@ -12,6 +12,9 @@ github = "zsh-users/zsh-completions"
 [plugins.prompt]
 local = "~/.zsh"
 
+[plugins.path]
+local = "~/.zsh/plugins"
+
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
 
