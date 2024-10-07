@@ -1,4 +1,6 @@
-#### terminal proxy setting functions
+# terminal proxy setting functions
+
+{{- if ne .chezmoi.hostname "sucni" -}}
 set_proxy() {
   echo "Proxy config have set."
   export http_proxy=http://127.0.0.1:7890 
@@ -13,3 +15,4 @@ unset_proxy() {
 }
 
 set_proxy
+{{- end -}}
