@@ -66,7 +66,7 @@ local function filename()
 end
 
 local function filetype()
-  return string.format(" %s ", vim.bo.filetype):upper()
+  return string.format(" %s ", vim.bo.filetype)
 end
 
 local function lineinfo()
@@ -123,8 +123,8 @@ Statusline.active = function()
     "%#Normal#",
     lsp(),
     "%=%#StatusLineExtra#",
-    filetype(),
     lineinfo(),
+    filetype(),
   }
 end
 
