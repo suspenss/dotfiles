@@ -18,6 +18,8 @@ github = "romkatv/zsh-defer"
 [plugins.keymaps]
 local = "~/.zsh/plugins"
 
+[plugins.shell_proxy]
+local = "~/.zsh/plugins"
 
 # --------- Defered ---------- #
 [plugins.alias]

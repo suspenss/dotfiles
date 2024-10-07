@@ -13,4 +13,3 @@ unset_proxy() {
 }
 
 set_proxy
-
