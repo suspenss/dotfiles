@@ -2,6 +2,10 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
+if vim.g.vscode then
+  return {}
+end
+
 --  e.g. ~/.local/share/chezmoi/*
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = { os.getenv("HOME") .. "/.local/share/chezmoi/*" },

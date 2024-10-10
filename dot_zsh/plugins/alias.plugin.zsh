@@ -17,5 +17,4 @@ alias l='ls -CF'
 alias dot='chezmoi'
 
 #incus system on macos 
-# alias learn='incus exec learn fish --user=1000 --group=998 --cwd=/home/suspen'
-
+alias learn='kitten ssh learn'
